@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Lucia Tennis Club — More than a tennis club, a community. Book courts, join leagues, and play social tennis in La Lucia, Durban." />
+  <title>La Lucia Tennis Club</title>
+
+  <!-- Google Fonts: Bebas Neue (display headings) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =============================================
+       STICKY NAVIGATION
+  ============================================= -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+
+      <!-- Logo — uses images/LLTCLogo.png -->
+      <a href="#home" class="nav-logo" aria-label="La Lucia Tennis Club home">
+        <img src="images/LLTCLogo.png" alt="La Lucia Tennis Club logo" class="nav-logo-img" />
+        <!--<div class="nav-logo-text">
+          <span class="logo-name">La Lucia</span>
+          <span class="logo-sub">Tennis Club</span>
+        </div> -->
+      </a>
+
+      <!-- Desktop navigation links -->
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#facilities">Facilities</a>
+        <a href="#membership">Membership</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="https://lalucia.courtbookings.co.za/login" target="_blank" rel="noopener" class="nav-cta">Book a Court</a>
+      </nav>
+
+      <!-- Hamburger — visible on mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile navigation overlay -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <nav>
+      <a href="#about"      class="mobile-link">About</a>
+      <a href="#sessions"   class="mobile-link">Sessions</a>
+      <a href="#facilities" class="mobile-link">Facilities</a>
+      <a href="#membership" class="mobile-link">Membership</a>
+      <a href="#gallery"    class="mobile-link">Gallery</a>
+      <a href="#contact"    class="mobile-link">Contact</a>
+      <a href="https://lalucia.courtbookings.co.za/login" target="_blank" rel="noopener" class="mobile-link cta-link">Book a Court ↗</a>
+    </nav>
+  </div>
+
+
+  <!-- =============================================
+       HERO SECTION
+       Replace images/hero.jpg with your own photo.
+  ============================================= -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero.jpg" alt="Tennis courts at La Lucia" class="hero-img" />
+      <div class="hero-overlay"></div>
+      <!-- Decorative court-line accents -->
+      <div class="court-lines" aria-hidden="true">
+        <div class="court-line cl-v"></div>
+        <div class="court-line cl-h"></div>
+        <div class="court-line cl-top"></div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">Durban · La Lucia · Est. in the Community</span>
+      <h1 class="hero-title">
+        La Lucia<br />
+        <span class="accent">Tennis Club</span>
+      </h1>
+      <p class="hero-sub">More than a tennis club — a community.</p>
+
+      <div class="hero-buttons">
+        <!-- WhatsApp booking — href managed in script.js via WA_NUMBER -->
+        <a href="#" class="btn btn-primary wa-book-btn" id="heroWaBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book via WhatsApp
+        </a>
+        <!-- Online booking — opens in new tab -->
+        <a href="https://lalucia.courtbookings.co.za/login" target="_blank" rel="noopener" class="btn btn-secondary">
+          Book a Court Online
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       ABOUT SECTION
+       Replace images/about.jpg with your own photo.
+  ============================================= -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-text">
+          <span class="section-eyebrow reveal">Our Story</span>
+          <h2 class="section-title reveal">Built on rallies,<br /><span class="accent">rooted in community.</span></h2>
+          <p class="reveal">Nestled in the heart of La Lucia, Durban, our club is the meeting point for players of every level — from first-timers picking up a racket for the first time to seasoned competitors chasing every point.</p>
+          <p class="reveal">We believe tennis is better together. Whether you're here for a social hit on a Wednesday afternoon, a competitive league match, or simply a catch-up after a hard-fought set — La Lucia Tennis Club is your home court.</p>
+          <p class="reveal">With floodlit courts, a welcoming clubhouse, social sessions running throughout the week, and a calendar packed with events, there's always a reason to come back.</p>
+          <a href="#membership" class="btn btn-outline reveal">Explore Membership</a>
+        </div>
+
+        <div class="about-visual reveal">
+          <div class="about-img-wrap">
+            <img src="images/about.jpg" alt="Players at La Lucia Tennis Club" loading="lazy" />
+          </div>
+          <div class="stat-card stat-card--tl">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Courts</span>
+          </div>
+          <div class="stat-card stat-card--br">
+            <span class="stat-number">All<br>Levels</span>
+            <span class="stat-label">Welcome</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SESSIONS & PRICING SECTION
+  ============================================= -->
+  <section class="section sessions" id="sessions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">When to Play · What it Costs</span>
+        <h2 class="section-title reveal">Sessions &amp;<br /><span class="accent">Pricing.</span></h2>
+      </div>
+
+      <div class="sessions-grid">
+
+        <!-- Social Tennis Card -->
+        <div class="session-card reveal">
+          <div class="session-card__header">
+            <div class="session-icon">
+              <!-- People icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><path d="M16 3.13a4 4 0 010 7.75"/><path d="M21 21v-2a4 4 0 00-3-3.87"/></svg>
+            </div>
+            <div>
+              <h3>Social Tennis</h3>
+              <span class="session-price">R60 <em>per session</em></span>
+            </div>
+          </div>
+          <p>Drop in, meet other members, and enjoy organised social play. All levels welcome — no booking required.</p>
+          <div class="session-times">
+            <div class="time-block">
+              <span class="time-day">Wed, Sat &amp; Sun</span>
+              <div class="time-rows">
+                <div class="time-row">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <span><strong>Afternoons</strong></span>
+                </div>
+                <div class="time-row season winter">
+                  <span class="season-badge">❄ Winter</span> from 2:00 pm
+                </div>
+                <div class="time-row season summer">
+                  <span class="season-badge">☀ Summer</span> from 3:00 pm
+                </div>
+              </div>
+            </div>
+            <div class="time-block">
+              <span class="time-day">Tue &amp; Thu</span>
+              <div class="time-rows">
+                <div class="time-row">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  <span><strong>Mornings</strong></span>
+                </div>
+                <div class="time-row season winter">
+                  <span class="season-badge">❄ Winter</span> from 7:30 am
+                </div>
+                <div class="time-row season summer">
+                  <span class="season-badge">☀ Summer</span> from 7:00 am
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Private Court Hire Card -->
+        <div class="session-card reveal">
+          <div class="session-card__header">
+            <div class="session-icon">
+              <!-- Racket icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><line x1="4.5" y1="11" x2="17.5" y2="11"/><line x1="11" y1="4.5" x2="11" y2="17.5"/><line x1="16" y1="16" x2="22" y2="22"/></svg>
+            </div>
+            <div>
+              <h3>Private Court Hire</h3>
+              <span class="session-price">R150 <em>per hour</em></span>
+            </div>
+          </div>
+          <p>Book a court for yourself, with a partner, or a group. Available 7 days a week — book online or via WhatsApp.</p>
+          <div class="session-ctas">
+            <a href="https://lalucia.courtbookings.co.za/login" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Book Online ↗</a>
+            <a href="#" class="btn btn-primary btn-sm wa-book-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Floodlights Card -->
+        <div class="session-card reveal">
+          <div class="session-card__header">
+            <div class="session-icon">
+              <!-- Light / sun icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            </div>
+            <div>
+              <h3>Floodlights</h3>
+              <span class="session-price">R100 <em>/ hr · members</em></span>
+            </div>
+          </div>
+          <p>Extend your game into the evening with our floodlit courts. Members enjoy a discounted rate; visitor rate includes court hire.</p>
+          <div class="floodlight-rates">
+            <div class="rate-row">
+              <span class="rate-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                Members
+              </span>
+              <span class="rate-price">R100 / hr</span>
+            </div>
+            <div class="rate-row">
+              <span class="rate-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Visitors
+              </span>
+              <span class="rate-price">R250 / hr <small>(incl. court hire)</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coaching Card -->
+        <div class="session-card reveal">
+          <div class="session-card__header">
+            <div class="session-icon">
+              <!-- Trophy / star icon -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 21h8M12 17v4M6 3H4a2 2 0 00-2 2v2a4 4 0 004 4h.1"/><path d="M18 3h2a2 2 0 012 2v2a4 4 0 01-4 4h-.1"/><path d="M6 3h12v7a6 6 0 01-12 0V3z"/></svg>
+            </div>
+            <div>
+              <h3>Coaching</h3>
+              <span class="session-price coaching-badge">Roscoe's Academy</span>
+            </div>
+          </div>
+          <p>Professional coaching available through Roscoe's Academy. From beginners to competitive players — they'll take your game to the next level.</p>
+          <div class="coaching-contact">
+            <a href="tel:+27834501798" class="coaching-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 12.07 19.79 19.79 0 01.77 3.38 2 2 0 012.75 1.23h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.37a16 16 0 006.72 6.72l1.21-1.21a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +27 83 450 1798
+            </a>
+            <span class="coaching-note">Call or WhatsApp to enquire</span>
+          </div>
+        </div>
+
+      </div><!-- /sessions-grid -->
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FACILITIES SECTION
+  ============================================= -->
+  <section class="section facilities" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">What We Offer</span>
+        <h2 class="section-title reveal">World-class facilities,<br /><span class="accent">local soul.</span></h2>
+      </div>
+
+      <div class="facilities-grid">
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="3"/><line x1="10" y1="28" x2="46" y2="28" stroke="currentColor" stroke-width="2.5"/><line x1="28" y1="10" x2="28" y2="46" stroke="currentColor" stroke-width="2.5"/><line x1="14.5" y1="14.5" x2="41.5" y2="41.5" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/><line x1="41.5" y1="14.5" x2="14.5" y2="41.5" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/><line x1="40" y1="40" x2="58" y2="58" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Floodlit Courts</h3>
+          <p>Play day or night on our well-maintained courts — suitable for social hits, coaching sessions, and competitive league play.</p>
+        </div>
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M8 56V28L32 10L56 28V56H8Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="24" y="38" width="16" height="18" stroke="currentColor" stroke-width="2.5"/><path d="M20 28H44" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Clubhouse</h3>
+          <p>Relax and socialise in our comfortable clubhouse — the perfect post-match venue to connect with fellow members.</p>
+        </div>
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><circle cx="22" cy="20" r="8" stroke="currentColor" stroke-width="3"/><circle cx="42" cy="20" r="8" stroke="currentColor" stroke-width="3"/><path d="M6 52c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M36 52c0-8.837 3.582-16 8-16" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Social Events</h3>
+          <p>Round-robins, club nights, sundowners, and year-end galas — the social calendar keeps the off-court camaraderie alive all year.</p>
+        </div>
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M20 8H44V30C44 41 32 48 32 48C32 48 20 41 20 30V8Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M12 12H20" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M44 12H52" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="32" y1="48" x2="32" y2="56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="22" y1="56" x2="42" y2="56" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Leagues</h3>
+          <p>Compete in organised club leagues for juniors, ladies, and men. Included with adult and junior membership — test your game against the best in the area.</p>
+        </div>
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 6C21.507 6 13 14.507 13 25C13 38 32 58 32 58C32 58 51 38 51 25C51 14.507 42.493 6 32 6Z" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="25" r="7" stroke="currentColor" stroke-width="3"/></svg>
+          </div>
+          <h3>Easy Access</h3>
+          <p>Located at 44 Oakleigh Avenue, La Lucia, with ample parking and a welcoming environment for players and families alike.</p>
+        </div>
+
+        <div class="facility-card reveal">
+          <div class="facility-icon">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 6L38.5 22H56L42 32.5L47.5 48.5L32 38L16.5 48.5L22 32.5L8 22H25.5L32 6Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Junior Programme</h3>
+          <p>Nurturing the next generation. Our junior programme, supported by Roscoe's Academy, develops skills, sportsmanship, and a lifelong love of tennis.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       MEMBERSHIP SECTION
+  ============================================= -->
+  <section class="section membership" id="membership">
+    <div class="membership-inner">
+      <div class="membership-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow reveal">Join the Club</span>
+          <h2 class="section-title reveal">Become part of<br /><span class="accent">the family.</span></h2>
+          <p class="membership-intro reveal">Membership means unlimited court access, league play, social tennis, and a community of players who love the game as much as you do. Reach out via WhatsApp and we'll walk you through everything.</p>
+        </div>
+
+        <!-- Membership tier cards -->
+        <div class="membership-cards">
+
+          <!-- Adult Full Membership -->
+          <div class="mem-card reveal">
+            <div class="mem-card__top">
+              <span class="mem-tier">Full Adult</span>
+              <div class="mem-price">
+                <span class="mem-amount">R2 600</span>
+                <span class="mem-period">per year</span>
+              </div>
+            </div>
+            <ul class="mem-perks">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited court bookings
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                League tennis included
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Social tennis included
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Clubhouse access
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Member floodlight rate (R100/hr)
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                All club events
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary wa-book-btn mem-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enquire Now
+            </a>
+          </div>
+
+          <!-- Family Membership -->
+          <div class="mem-card mem-card--featured reveal">
+            <div class="mem-badge">Most Popular</div>
+            <div class="mem-card__top">
+              <span class="mem-tier">Family</span>
+              <div class="mem-price">
+                <span class="mem-amount">R3 150</span>
+                <span class="mem-period">per year</span>
+              </div>
+            </div>
+            <ul class="mem-perks">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited court bookings
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Whole family covered
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Clubhouse access
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Member floodlight rate (R100/hr)
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                All club events
+              </li>
+              <li class="mem-perk--note">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                League &amp; social tennis excluded
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary wa-book-btn mem-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enquire Now
+            </a>
+          </div>
+
+          <!-- Junior / Student Membership -->
+          <div class="mem-card reveal">
+            <div class="mem-card__top">
+              <span class="mem-tier">Junior / Student</span>
+              <div class="mem-price">
+                <span class="mem-amount">R1 300</span>
+                <span class="mem-period">per year</span>
+              </div>
+            </div>
+            <ul class="mem-perks">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Unlimited court bookings
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                League tennis included
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Social tennis included
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Clubhouse access
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Member floodlight rate (R100/hr)
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Coaching &amp; development pathway
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary wa-book-btn mem-cta">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enquire Now
+            </a>
+          </div>
+
+        </div><!-- /membership-cards -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       GALLERY SECTION
+       Replace images/gallery-*.jpg with your own photos.
+  ============================================= -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Life at the Club</span>
+        <h2 class="section-title reveal">Moments on &amp;<br /><span class="accent">off the court.</span></h2>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-item--large reveal">
+          <img src="images/gallery-1.jpg" alt="Match day at La Lucia Tennis Club" loading="lazy" />
+          <div class="gallery-overlay"><span>Match Day</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/gallery-2.jpg" alt="Social tennis hit" loading="lazy" />
+          <div class="gallery-overlay"><span>Social Hit</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/gallery-3.jpg" alt="Coaching session" loading="lazy" />
+          <div class="gallery-overlay"><span>Coaching</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/gallery-4.jpg" alt="Club event" loading="lazy" />
+          <div class="gallery-overlay"><span>Club Events</span></div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/gallery-5.jpg" alt="Evening floodlit courts" loading="lazy" />
+          <div class="gallery-overlay"><span>Night Courts</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall reveal">
+          <img src="images/gallery-6.jpg" alt="Community at the club" loading="lazy" />
+          <div class="gallery-overlay"><span>Community</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       CONTACT SECTION
+  ============================================= -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow reveal">Get in Touch</span>
+        <h2 class="section-title reveal">We'd love to<br /><span class="accent">hear from you.</span></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-details">
+
+          <div class="contact-item reveal">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.686 2 6 4.686 6 8c0 5.25 6 13 6 13s6-7.75 6-13c0-3.314-2.686-6-6-6z"/><circle cx="12" cy="8" r="2"/></svg>
+            </div>
+            <div>
+              <strong>Find Us</strong>
+              <p>44 Oakleigh Avenue, La Lucia<br />Durban, 4051</p>
+            </div>
+          </div>
+
+          <div class="contact-item reveal">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.86 12.07 19.79 19.79 0 01.77 3.38 2 2 0 012.75 1.23h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.37a16 16 0 006.72 6.72l1.21-1.21a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <strong>Call or WhatsApp</strong>
+              <p>
+                <a href="tel:+27637841545">+27 63 784 1545</a><br />
+                <a href="#" class="wa-book-btn" id="contactWaBtn">Message on WhatsApp →</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item reveal">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3"/><path d="M16.5 7.5h.01"/></svg>
+            </div>
+            <div>
+              <strong>Follow Along</strong>
+              <div class="social-links">
+                <a href="https://www.instagram.com/laluciatennis" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3"/><path d="M16.5 7.5h.01"/></svg>
+                  Instagram
+                </a>
+                <a href="https://www.facebook.com/share/g/1CRtVmcqQQ/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                  Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coaching contact in contact section too -->
+          <div class="contact-item reveal">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 21h8M12 17v4M6 3H4a2 2 0 00-2 2v2a4 4 0 004 4h.1"/><path d="M18 3h2a2 2 0 012 2v2a4 4 0 01-4 4h-.1"/><path d="M6 3h12v7a6 6 0 01-12 0V3z"/></svg>
+            </div>
+            <div>
+              <strong>Coaching — Roscoe's Academy</strong>
+              <p><a href="tel:+27834501798">+27 83 450 1798</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Map embed -->
+        <div class="map-wrap reveal">
+          <iframe
+            title="La Lucia Tennis Club on Google Maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.0!2d31.063!3d-29.804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s44+Oakleigh+Ave%2C+La+Lucia%2C+Durban%2C+4051!5e0!3m2!1sen!2sza!4v1"
+            width="100%" height="100%"
+            style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="La Lucia Tennis Club home">
+            <img src="images/LLTCLogo.png" alt="La Lucia Tennis Club" class="footer-logo-img" />
+            <div class="nav-logo-text">
+              <span class="logo-name">La Lucia</span>
+              <span class="logo-sub">Tennis Club</span>
+            </div>
+          </a>
+          <p>More than a tennis club — a community. Located in La Lucia, Durban, South Africa.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/laluciatennis" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="3"/><path d="M16.5 7.5h.01"/></svg>
+            </a>
+            <a href="https://www.facebook.com/share/g/1CRtVmcqQQ/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/27637841545" target="_blank" rel="noopener" aria-label="WhatsApp" class="footer-social">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#sessions">Sessions &amp; Pricing</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://lalucia.courtbookings.co.za/login" target="_blank" rel="noopener">Book a Court ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>44 Oakleigh Avenue</li>
+            <li>La Lucia, Durban, 4051</li>
+            <li><a href="tel:+27637841545">+27 63 784 1545</a></li>
+            <li><a href="#" class="wa-book-btn" id="footerWaBtn">WhatsApp Us</a></li>
+          </ul>
+          <h4 style="margin-top:1.5rem;">Coaching</h4>
+          <ul>
+            <li>Roscoe's Academy</li>
+            <li><a href="tel:+27834501798">+27 83 450 1798</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> La Lucia Tennis Club. All rights reserved.</p>
+        <p>44 Oakleigh Ave, La Lucia, Durban, 4051</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       FLOATING WHATSAPP BUTTON (fixed bottom-right)
+  ============================================= -->
+  <a href="#" class="wa-float wa-book-btn" id="floatWaBtn" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-tooltip">Chat with us</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
